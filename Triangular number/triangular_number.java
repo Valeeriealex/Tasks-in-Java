@@ -10,17 +10,16 @@ public class triangular_number {
         int a = Scanner.nextInt();
         Scanner.close();
         System.out.println(a);
-        //System.out.println("Треугольное число = " + Triangle(a));
+        System.out.println("Треугольное число = " + Triangle(a));
     }
     // Метод вычисления треугольного числа
     public static int Triangle(int num) {
         if (num == 1) {
             return 1;
         }
-        return Triangle(num - 1) + num;
+        return Triangle (num*(num + 1) / 2); //или (num - 1) + num
     }
 
-    public static String print (int a, int num) {
-        return ("Треугольное число = " + Triangle(a));
+    //public static String print (int a, int num) {
+    //    return ("Треугольное число = " + Triangle(a));
     }
-}
