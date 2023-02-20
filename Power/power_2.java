@@ -13,10 +13,10 @@ public class power_2 {
 		Scanner scan2 = new Scanner(System.in);
 		int power = scan2.nextInt();
         
-        System.out.println("Число " + number + " в степени " + power + " равно " + Math.pow(number, power)); //возведение в степень
-
         scan1.close();
-        scan2.close();
+        scan2.close(); 
+
+        System.out.println("Число " + number + " в степени " + power + " равно " + Math.pow(number, power)); //возведение в степень
     }
 }
 
