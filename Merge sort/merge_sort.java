@@ -63,7 +63,7 @@ public class merge_sort {
     }
 
     public int [] mergeArray(int [] arrayA, int [] arrayB) { // слияние отсортированных массивов
-        int [] arrayC = int [arrayA.length + arrayB.length];
+        int [] arrayC = int [arrayA.length + arrayB.length]; // ошибка?
         int positionA = 0, positionB = 0;
         for (int i = 0; i < arrayC.length; i++) {
             if (positionA == arrayA.length){
