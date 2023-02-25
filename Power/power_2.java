@@ -15,7 +15,7 @@ public class power_2 {
         
         scan1.close();
         scan2.close(); 
-
+        
         System.out.println("Число " + number + " в степени " + power + " равно " + Math.pow(number, power)); //возведение в степень
     }
 }
