@@ -1,5 +1,3 @@
-package HeapSort;
-
 public class heap_sort {
     // Пирамидальная сортировка
     public void sort(int arr[])
