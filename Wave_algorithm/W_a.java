@@ -9,11 +9,11 @@ public class W_a {
     
         System.out.println(mapToString(map)); // Печать метода сопоставления со строкой в карте
     
-        int[] startPos = getPoint2D(6, 4); // Вызов метода получения стартовой позиции
+        int[] startPos = getPoint2D(2 , 3); // Вызов метода получения стартовой позиции
     
         WaveAlgorithm(map, startPos); // Вызов Волнового алгоритма, применяемого к карте и стартовой позиции
     
-        System.out.println(mapToString(map)); // Печать метода сопоставления со строкой в карте
+        System.out.println(mapToString(map)); // Печать метода заполнения и печати в карте
     
       }
       public static int[] getPoint2D(int x, int y) { // Метод получение координаты в 2D пространстве
@@ -39,17 +39,16 @@ public class W_a {
           { -1, -1, -1, -1, -1, -1, -1, -1, -1 }
       };
     }
-    public static String mapToString(int[][] map) { // Метод сопоставления со строкой
+    public static String mapToString(int[][] map) { // Метод заполнения и печати карты
          StringBuilder sb = new StringBuilder();
     
         for (int row = 0; row < map.length; row++) { // Ряд
           for (int col = 0; col < map[row].length; col++) { // Колличество
-            sb.append(String.format("%3d", map[row][col])); // Карта состоит из рядов и колличеств
+            sb.append(String.format("%3d", map[row][col])); // Добовление в строку черз ряды и колличество
           }
           sb.append("\n");
         }
-    
-        return sb.toString();
+      return sb.toString();
       }
     
       public static void WaveAlgorithm(int[][] map, int[] startPos) { // Реазизация волнового алгоритма, передается карта и стартовая позиция
@@ -62,7 +61,8 @@ public class W_a {
           int[] current_Position = queue.remove(); // Текущая позиция = удаление(сокращение) очереди
           int posX = current_Position[0]; // Позиция х = текущая позиция от 0
           int posY = current_Position[1]; // позиция У = текущая позиция от 1
-        // Возможные варианты хода:
+
+        // Заполнение карты:
           if (map[posX - 1][posY] == 0) {
             int[] temp = new int[] { posX - 1, posY };
             queue.add(temp);
