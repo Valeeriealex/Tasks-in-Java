@@ -26,19 +26,74 @@ public class CollectionFigures {
         int choice = input.nextInt();
         switch (choice) {
             case 1:
-                allFigures.addTriangle(input);
-                Program.programMenu(input, allFigure);;
+                createTriagle(input, allFigure);
+                createNewFigures(input, allFigure);
             case 2:
-                allFfigures.addSquare(input);
-                Program.programMenu(input, allFigure);;
+                createSquare(input, allFigure);
+                createNewFigures(input, allFigure);
             case 3:
-                allFigures.addRectangle(input);
-                Program.programMenu(input, allFigure);;
+                createRectangle(input, allFigure);
+                createNewFigures(input, allFigure);
             case 4:
-                allFigures.addCircle(input);
-                Program.programMenu(input, allFigure);;
+                createCircle(input, allFigure);
+                createNewFigures(input, allFigure);
+            case 5:
+                programMenu(input, allFigure);
             }
-    }
+            // case 1:
+            //   allFigures.addTriangle(input);
+            //  Program.programMenu(input, allFigure);;
+            //case 2:
+            //    allFfigures.addSquare(input);
+            //    Program.programMenu(input, allFigure);;
+            //case 3:
+            //    allFigures.addRectangle(input);
+            //    Program.programMenu(input, allFigure);;
+            //case 4:
+            //    allFigures.addCircle(input);
+            //    Program.programMenu(input, allFigure);;
+        }
+
+        private static void createTriagle(Scanner input, ArrayList<Figures> allFigure) {
+            System.out.println("\nНазовите фигуру: ");
+            String name = input.nextLine();
+            System.out.print("Введите сторону a: ");
+            Double a = input.nextDouble();
+            System.out.print("Введите сторону b: ");
+            Double b = input.nextDouble();
+            System.out.print("Введите сторону c: ");
+            Double c = input.nextDouble();
+            allFigure.add(new Triangle(name, a, b, c));
+    
+        }
+    
+        private static void createSquare(Scanner input, ArrayList<Figures> allFigure) {
+            System.out.println("\nНазовите фигуру: ");
+            String name = input.nextLine();
+            System.out.print("Введите сторону a: ");
+            Double a = input.nextDouble();
+            allFigure.add(new Square(name, a));
+    
+        }
+    
+        private static void createRectangle(Scanner input, ArrayList<Figures> allFigure) {
+            System.out.println("\nНазовите фигуру: ");
+            String name = input.nextLine();
+            System.out.print("Введите сторону a: ");
+            Double a = input.nextDouble();
+            System.out.print("Введите сторону b: ");
+            Double b = input.nextDouble();
+            allFigure.add(new Rectangle(name, a, b));
+        }
+    
+        private static void createCircle(Scanner input, ArrayList<Figures> allFigure) {
+            System.out.println("\nНазовите фигуру: ");
+            String name = input.nextLine();
+            System.out.print("Введите радиус: ");
+            Double radius = input.nextDouble();
+            allFigure.add(new Circle(name, radius));
+        }
+        
     public static void delleteFigure(Scanner input, ArrayList<Figures> allFigure) {
         showAll();
         System.out.print("\nКакую фигуру удалить?: ");
