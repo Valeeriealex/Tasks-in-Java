@@ -87,7 +87,7 @@ public class Program {
         System.out.printf("%d) Назад\n", Zoo.allAnimals.size());
         System.out.print("Введите цифру того, кого хотите удалить: ");
         int choice = input.nextInt();
-        if (choice < Zoo.sayAllAnimals.size()) {
+        if (choice < Zoo.animals.size()) {
             animal.removeAnimal(choice);
             System.out.println("Вы удалили животное!");
             showMenu(animal, input);

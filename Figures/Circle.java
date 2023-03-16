@@ -1,5 +1,5 @@
 package Figures;
-
+// Круг
 public class Circle extends Figures {
     private String name;
     private double radius;
@@ -38,5 +38,11 @@ public class Circle extends Figures {
             return -1;
         else 
             return 0;
+    }
+
+    @Override
+    Double getPerimeter() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getPerimeter'");
     }
 }

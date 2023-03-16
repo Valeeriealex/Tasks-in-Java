@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Zoo {
     public static ArrayList<Animals> allAnimal = new ArrayList<>();
+    public static Object animals;
     {
     allAnimals.add(new Cat("Кот", "Порода", "Да", "Цвет шерсти", "Дата рождения", 25, 7, "Цвет глаз", "да"));
     allAnimals.add(new Tiger(200, 45, "Цвет глаз", "Место обитания", "12.04.1977"));
