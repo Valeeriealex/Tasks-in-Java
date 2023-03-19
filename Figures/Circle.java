@@ -40,4 +40,10 @@ public class Circle extends Figures {
             return 0;
     }
 
+    @Override
+    Double getPerimeter() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getPerimeter'");
+    }
+
 }
